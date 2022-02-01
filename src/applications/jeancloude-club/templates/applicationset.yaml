@@ -3,8 +3,8 @@ kind: ApplicationSet
 metadata:
   labels:
 {{ include "helm.labels" . | indent 4 }}
-  namespace: {{ .Release.Namespace }}
-  name: {{ .Release.Name }}-applicationset
+  namespace: argocd
+  name: argocd-jeancloudeclub-applicationset
 spec:
   generators:
   - git:
