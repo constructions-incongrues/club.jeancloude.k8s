@@ -9,7 +9,7 @@ metadata:
     app: peertube
   annotations:
     cert-manager.io/cluster-issuer: cert-manager-pastis-hosting-net-issuer
-    external-dns.alpha.kubernetes.io/hostname: keycloak.pastis-hosting.net
+    external-dns.alpha.kubernetes.io/hostname: teloche.jeancloude.club
     traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   tls:
