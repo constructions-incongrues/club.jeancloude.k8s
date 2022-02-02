@@ -4,7 +4,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: peertube
+  name: peertube-ingress
   labels:
     app: peertube
   annotations:
