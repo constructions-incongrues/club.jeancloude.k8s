@@ -18,7 +18,7 @@ spec:
       finalizers:
       - resources-finalizer.argocd.argoproj.io
     spec:
-      project: jeancloude-club
+      project: jeancloude.club
       source:
         repoURL: https://github.com/constructions-incongrues/club.jeancloude.k8s.git
         targetRevision: HEAD
