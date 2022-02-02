@@ -1,19 +1,22 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-
-namespace: peertube
-
-bases:
-- https://github.com/coopgo/peertube-k8s/
-
-resources:
-- ingress.yaml
-- secret.yaml
-
-patchesJson6902:
-  - path: ingress-patch.yaml
-    target:
-      group: networking.k8s.io
-      version: v1
-      kind: Ingress
-      name: peertube
+generatorOptions:
+    disableNameSuffixHash: true
+secretGenerator:
+    - name: peertube-secret
+      literals:
+          - PEERTUBE_DB_PASSWORD=peertube
+          - POSTGRES_PASSWORD=postgresql
+          - PEERTUBE_DB_HOSTNAME="postgres"
+          - PEERTUBE_DB_PORT="5432"
+          - PEERTUBE_WEBSERVER_HOSTNAME="teloche.jeancloude.club"
+          - PEERTUBE_SMTP_FROM="noreply@example.org"
+          - PEERTUBE_ADMIN_EMAIL="jeancloude@jeancloude.club"
+          - POSTFIX_myhostname="teloche.jeancloude.club"
+    - name: peertube-s3-secret
+      literals:
+          - AWS_S3_ACCESS_KEY_ID="CHANGEME"
+          - AWS_S3_SECRET_ACCESS_KEY="CHANGEME"
+          - AWS_S3_BUCKET=CHANGEME
+          - AWS_S3_URL="CHANGEME"
+    - name: peertube-postfix-secret
+      literals:
+          - POSTFIX_myhostname="teloche.jeancloude.club"
