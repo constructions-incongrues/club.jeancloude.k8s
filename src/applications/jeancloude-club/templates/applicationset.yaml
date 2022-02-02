@@ -31,4 +31,4 @@ spec:
           - CreateNamespace=true
       destination:
         server: https://kubernetes.default.svc
-        namespace: jeancloude-club-'{{`{{path.basename}}`}}'
+        namespace: 'jeancloude-club-{{`{{path.basename}}`}}'
