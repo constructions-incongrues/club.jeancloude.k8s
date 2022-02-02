@@ -7,7 +7,7 @@ bases:
 - https://github.com/coopgo/peertube-k8s/
 
 resources:
-- ingress.yaml
+- ingress-patch.yaml
 - secret.yaml
 
 patchesJson6902:
