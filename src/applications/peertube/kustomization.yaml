@@ -4,12 +4,12 @@ secretGenerator:
     - name: peertube-secret
       literals:
           - PEERTUBE_DB_PASSWORD=peertube
-          - POSTGRES_PASSWORD=postgresql
-          - PEERTUBE_DB_HOSTNAME="postgres"
+          - POSTGRES_PASSWORD=peertube
+          - PEERTUBE_DB_HOSTNAME="postgressql"
           - PEERTUBE_DB_PORT="5432"
           - PEERTUBE_WEBSERVER_HOSTNAME="teloche.jeancloude.club"
           - PEERTUBE_SMTP_FROM="noreply@example.org"
-          - PEERTUBE_ADMIN_EMAIL="jeancloude@jeancloude.club"
+          - PEERTUBE_ADMIN_EMAIL="tristan@jeancloude.club"
           - POSTFIX_myhostname="teloche.jeancloude.club"
     - name: peertube-s3-secret
       literals:
