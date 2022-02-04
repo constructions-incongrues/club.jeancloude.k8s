@@ -5,3 +5,6 @@ namespace: peertube
 
 bases:
 - https://github.com/coopgo/peertube-k8s/
+
+resources:
+- secret.yaml
