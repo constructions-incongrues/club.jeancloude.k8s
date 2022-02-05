@@ -3,7 +3,7 @@ kind: ApplicationSet
 metadata:
   labels:
 {{ include "helm.labels" . | indent 4 }}
-  namespace: argocd
+  namespace: jeancloude-club
   name: argocd-jeancloudeclub-applicationset
 spec:
   generators:
