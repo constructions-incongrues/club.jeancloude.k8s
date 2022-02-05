@@ -2,3 +2,4 @@ auth:
   username: "peertube"
   password: "peertube"
   database: "peertube"
+  postgresPassword: "postgre"
