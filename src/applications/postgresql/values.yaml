@@ -1,11 +1,6 @@
-postgresqlPassword: postgresql
-postgresqlPostgresPassword: postgresql
-postgresqlDatabase: peertube
-persistence:
-  enabled: true
-  size: 1Gi
-volumePermissions:
-  enabled: true
-primary:
-  annotations:
-    k10.kasten.io/forcegenericbackup: 'true'
+postgresql:
+  auth:
+    postgresPassword: "postgresql"
+    username: "postgresql"
+    password: "postgresql"
+    database: "peertube"
