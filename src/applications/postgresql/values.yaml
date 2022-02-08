@@ -1,5 +1,6 @@
-auth:
-  username: "peertube"
-  password: "peertube"
-  database: "peertube"
-  postgresPassword: "postgre"
+postgresql:
+  auth:
+    username: "peertube"
+    password: "peertube"
+    database: "peertube"
+    postgresPassword: "postgre"
